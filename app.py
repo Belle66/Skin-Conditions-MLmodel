@@ -3,7 +3,7 @@ import tensorflow as tf
 from PIL import Image, ImageOps
 import numpy as np
 
-st.set_page_config(page_title="Dermatology AI Classifier", page_icon="🩺", layout="centered")
+st.set_page_config(page_title="Dermatology AI Classifier", page_icon="Dermatology AI", layout="centered")
 
 @st.cache_resource
 def load_my_model():
@@ -18,7 +18,7 @@ st.stop()
 
 class_names = ['Acne and Rosacea', 'Eczema']
 
-st.title("🩺 Dermatology AI Classifier")
+st.title("Dermatology AI Classifier")
 st.write("Upload a clear photo of the skin condition for an AI-powered prediction.")
 st.markdown("---")
 
@@ -43,11 +43,11 @@ confidence = np.max(prediction) * 100
 
 st.subheader("Result:")
 if confidence > 75:
-st.success(f"**Identified as:** {result_label}")
+st.success(f"Identified as: {result_label}")
 else:
-st.warning(f"**Likely:** {result_label} (Low confidence)")
+st.warning(f"Likely: {result_label} (Low confidence)")
 
-st.info(f"**Confidence Level:** {confidence:.2f}%")
+st.info(f"Confidence Level: {confidence:.2f}%")
 
 st.markdown("---")
 st.caption("Developed for Horus University (HUE) - AI Department Project")
