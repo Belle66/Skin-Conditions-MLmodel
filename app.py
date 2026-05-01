@@ -50,5 +50,3 @@ st.warning(f"**Likely:** {result_label} (Low confidence)")
 st.info(f"**Confidence Level:** {confidence:.2f}%")
 
 st.markdown("---")
-st.caption("Developed for Horus University (HUE) - AI Department Project")
-partment Project")
